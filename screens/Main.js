@@ -7,43 +7,13 @@ import PhotoDetail from './PhotoDetail';
 import StoryDetail from './StoryDetail';
 import VideoDetail from './VideoDetails';
 import { useType } from '../App';
+import styles from '../App.css'
 
 const wait = (timeout) => {
     return new Promise(resolve => setTimeout(resolve, timeout));
   }
 
 export default function Main(props){
-        const styles = StyleSheet.create({
-                    container: {
-                        flex:   1,
-                        backgroundColor:"#FFF"
-                    },
-                    text:   {
-                        color:  "#161924",
-                        fontSize: 15,
-                        fontWeight: "800"
-                    },
-                    headings:{
-                        fontWeight: 900,
-                    //    alignSelf: "center",
-                        color:  "#161924",
-                        fontSize: 22,
-                        fontWeight: "500",
-                        padding:5
-                    },
-                    photo_caption:{
-                        fontWeight: 700,
-                        color:  "#FFF",
-                        fontSize: 20,
-                        fontWeight: "500"
-                    },
-                    border:{
-                        borderColor: '#ccc',
-                        borderTopWidth: 2,
-                        borderBottomWidth: 2,
-                        marginTop: 5
-                    }
-                });
 
         const [data, setData] = useState([]);
         const [topics, setTopics] = useState([]);
@@ -106,7 +76,9 @@ export default function Main(props){
         },[category])
 
         function switchComponent(r) {
+            if(type=="newslist"){
             setType(r.n_type);
+            }
             setData(r);
             setcategory(true);
         }
@@ -170,7 +142,7 @@ export default function Main(props){
 
         return  (
             category?type=="story"?<StoryDetail navigation={props.navigation} category={data}/>
-                                    :type=="photogallery"?<PhotoDetail navigation={props.navigation} category={data}/>
+                                    :(type=="photogallery" || type=="photolist")?<PhotoDetail navigation={props.navigation} category={data}/>
                                       :<VideoDetail navigation={props.navigation} category={data}/>
             :(type=="newslist"?(props.route.params.navigationItemId=="261669"?
             <View style={styles.container}>

@@ -34,6 +34,7 @@
     "react-native-animated-splash-screen": "^2.0.5",
     "react-native-asset": "^2.0.1",
     "react-native-config": "^1.4.11",
+    "react-native-css-transformer": "^1.2.4",
     "react-native-gesture-handler": "^2.8.0",
     "react-native-pager-view": "^6.1.0",
     "react-native-reanimated": "^2.12.0",

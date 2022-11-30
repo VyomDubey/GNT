@@ -77,7 +77,7 @@ export default function StoryDetail(props){
             iframe: iframeModel
         };
 
-        return  (topics?.highlight?.length>0 ?
+        return  (
             <View style={styles.container}>
                 <SafeAreaView style={{flex: 1}}>
                     <TouchableOpacity 
@@ -122,16 +122,16 @@ export default function StoryDetail(props){
                                     हाइलाइट्स
                                 </Text>
                         </View>
-                        {topics?.highlight?.map((text)=>{
+                        {topics?.highlight?.map((text, index)=>{
                             return(
-                            <Text style={styles.border}>
+                            <Text style={styles.border} key={index}>
                                 {text.h_title}
                             </Text>)
                         })}
                         <RenderHTML 
                         contentWidth={width}
                         renderers={renderers}
-                        source={{html: embedded}} style={styles.embedded}
+                        source={{html: embedded}} style={[styles.embedded,{opacity:0.99}]}
                         customHTMLElementModels={customHTMLElementModels}
                         WebView={WebView}
                         />
@@ -139,7 +139,5 @@ export default function StoryDetail(props){
                     </ScrollView>
                 </SafeAreaView>
             </View>
-            :
-            <View></View>
         )
 }

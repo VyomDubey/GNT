@@ -1,0 +1,29 @@
+.container {
+    flex: 1;
+    background-color: #FFF;
+  }
+  
+  .text {
+    color: #161924;
+    font-size: 15;
+    font-weight: 800;
+  }
+
+  .headings {
+    font-weight: 500;
+    color: #161924;
+    font-size: 22;
+  }
+
+  .photo_caption {
+    color: #FFF;
+    font-size: 20;
+    font-weight: 500;
+  }
+
+  .border {
+    border-color: #ccc;
+    border-top-width: 2;
+    border-bottom-width: 2;
+    margin-top: 5;
+  }

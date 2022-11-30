@@ -65,7 +65,7 @@ export default function Livetv(props){
             livetv.length>0 && <RenderHTML 
                         contentWidth={layout}
                         renderers={renderers}
-                        source={{html: livetv[0].iframe}} style={styles.embedded}
+                        source={{html: livetv[0].iframe}} style={[styles.embedded,{opacity:0.99}]}
                         customHTMLElementModels={customHTMLElementModels}
                         WebView={WebView}
                         />
@@ -74,7 +74,7 @@ export default function Livetv(props){
             livetv.length>0 && <RenderHTML 
                         contentWidth={layout}
                         renderers={renderers}
-                        source={{html: livetv[1].iframe}} style={styles.embedded}
+                        source={{html: livetv[1].iframe}} style={[styles.embedded,{opacity:0.99}]}
                         customHTMLElementModels={customHTMLElementModels}
                         WebView={WebView}
                         />
@@ -84,7 +84,7 @@ export default function Livetv(props){
             livetv.length>0 && <RenderHTML 
                         contentWidth={layout}
                         renderers={renderers}
-                        source={{html: livetv[2].iframe}} style={styles.embedded}
+                        source={{html: livetv[2].iframe}} style={[styles.embedded,{opacity:0.99}]}
                         customHTMLElementModels={customHTMLElementModels}
                         WebView={WebView}
                         />
@@ -94,7 +94,7 @@ export default function Livetv(props){
             livetv.length>0 && <RenderHTML 
                         contentWidth={layout}
                         renderers={renderers}
-                        source={{html: livetv[3].iframe}} style={styles.embedded}
+                        source={{html: livetv[3].iframe}} style={[styles.embedded,{opacity:0.99}]}
                         customHTMLElementModels={customHTMLElementModels}
                         WebView={WebView}
                         />

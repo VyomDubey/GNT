@@ -52,12 +52,6 @@ export default function PhotoDetail(props){
         return  (
             <View style={styles.container}>
                 <SafeAreaView style={{flex: 1}}>
-                    <TouchableOpacity 
-                        style={{alignItems:"flex-end",margin: 16}}
-                        onPress={props.navigation.openDrawer}
-                    >
-                    
-                    </TouchableOpacity>
                         <ScrollView>
                         <View style={{flex: 1, alignItems: "center", justifyContent: "center", flexDirection: "column",
                         padding: 5}}>
